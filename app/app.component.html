@@ -1,6 +1,11 @@
-<div>Collatz conjecture.</div>
+<h1>Collatz conjecture.</h1>
 
-<label for="first-name">Select a number: </label>
+<label for="first-name">Select a number</label>
+<br />
 <input type="text" [formControl]="test" />
+<br />
 <button (click)="testing()">Check Number</button>
-<app-barchart *ngIf="chartData" [data]="chartData"></app-barchart>
+<app-barchart
+  *ngIf="chartData && chartData.length > 0"
+  [data]="chartData"
+></app-barchart>
